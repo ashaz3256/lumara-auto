@@ -5,11 +5,12 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
+    exclude: ['**/node_modules/**', '**/tests/e2e/**']
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, './apps/web'),
-      '@/lib': resolve(__dirname, './apps/web/lib'),
+      '@': resolve(__dirname, '.'),
+      '@/lib': resolve(__dirname, './lib'),
       '@/types': resolve(__dirname, './packages/types'),
     },
   },
