@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
           }))
         },
         insights: {
-          create: advice.causes.map(cause => ({
+          create: advice.causes.map((cause: any) => ({
             label: cause.cause,
             why: cause.why,
             confidence: cause.confidence,

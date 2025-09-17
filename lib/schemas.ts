@@ -31,3 +31,22 @@ export const AdviceSchema = z.object({
 export type Symptom = z.infer<typeof SymptomSchema>
 export type Intake = z.infer<typeof IntakeSchema>
 export type Advice = z.infer<typeof AdviceSchema>
+
+export interface SessionData {
+  id: string
+  userId?: string
+  vehicleId?: string
+  createdAt: Date
+  severity: string
+  summary: string
+  symptoms: Array<{
+    key: string
+    value: string
+  }>
+  insights: Array<{
+    label: string
+    why: string
+    confidence: number
+    steps: string[]
+  }>
+}

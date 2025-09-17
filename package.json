@@ -15,6 +15,7 @@
     "db:seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^2.0.31",
     "@auth/prisma-adapter": "^1.4.0",
     "@prisma/client": "^5.20.0",
     "@react-pdf/renderer": "^3.4.4",

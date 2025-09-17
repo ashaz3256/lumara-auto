@@ -4,9 +4,7 @@ import { z } from 'zod'
 import { AdviceSchema, type Intake } from './schemas'
 import { getKB, getFuelContext } from './kb'
 
-const model = openai('gpt-4o-mini', {
-  objectGenerationMode: 'json'
-})
+const model = openai('gpt-4o-mini')
 
 // Safety gates for critical symptoms
 export function applySafetyGates(symptoms: Array<{ key: string; value: string }>): { severity: 'STOP' | 'LIMIT' | 'OK' | null; message?: string } {

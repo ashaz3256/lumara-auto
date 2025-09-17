@@ -1,3 +1,4 @@
+import React from 'react'
 import { Document, Page, Text, View, StyleSheet, Font } from '@react-pdf/renderer'
 import { type Advice, type SessionData } from './schemas'
 
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export function generateAdvicePDF(sessionData: SessionData, advice: Advice): Document {
+export function generateAdvicePDF(sessionData: SessionData, advice: Advice): React.ReactElement {
   const getSeverityStyle = (severity: string) => {
     switch (severity) {
       case 'STOP': return styles.severityBadge
