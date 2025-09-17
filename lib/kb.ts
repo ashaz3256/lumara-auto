@@ -46,7 +46,7 @@ export async function getKB(topic: string): Promise<string> {
   
   // Load and combine relevant files
   const contents: string[] = []
-  for (const file of relevantFiles) {
+  for (const file of Array.from(relevantFiles)) {
     try {
       const filePath = path.join(KB_DIR, file)
       const content = fs.readFileSync(filePath, 'utf-8')
